@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+</head>
+<body>
+    <h1>Todos</h1>
+    <div id="container">
+        <input type="text" id="input"/><button id="add">+</button>
+        <div id="tasks">
+            
+        </div>
+    </div>
+</body>
+<script>
+    // Get element
+    const input = document.getElementById('input');
+    const button = document.getElementById('add');
+    const tasks = document.getElementById('tasks');
+
+    // Add event listener for to the task list where when we click the button, a p tag is created and put into the ul
+   button.addEventListener('click', function () {
+    // create a p tag
+    let pTag = document.createElement('p');
+    // p tag will be worth whatever is in the input element
+    pTag.innerHTML = input.value
+    // append the p tag to tasks
+    tasks.appendChild(pTag)
+   })
+</script>
+</html>
